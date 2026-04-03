@@ -2,20 +2,12 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="service-tasks" />
-      </profile>
-      <profile name="Annotation profile for service.main" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="false">
-          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.38/lombok-1.18.38.jar" />
-        </processorPath>
-        <module name="service.main" />
       </profile>
       <profile name="Annotation profile for service.notification" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
@@ -25,13 +17,18 @@
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.40/lombok-1.18.40.jar" />
         </processorPath>
         <module name="service_notification" />
+        <module name="service.notification" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="service.main" target="21" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="service-tasks" options="-parameters" />
       <module name="service.main" options="-parameters" />
+      <module name="service.notification" options="-parameters" />
       <module name="service_notification" options="-parameters" />
     </option>
   </component>

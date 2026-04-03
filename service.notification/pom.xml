@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.lucasbx</groupId>
-    <artifactId>service_notification</artifactId>
+    <artifactId>service.notification</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>service.notification</name>
     <description>service.notification</description>

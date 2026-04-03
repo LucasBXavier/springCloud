@@ -9,7 +9,7 @@ RUN mvn clean install
 
 FROM amazoncorretto:21
 
-COPY --from=build /app/target/service-main-0.0.1-SNAPSHOT.jar /usr/local/lib/app.jar
+COPY --from=build /app/target/service.main-0.0.1-SNAPSHOT.jar /usr/local/lib/app.jar
 
 WORKDIR /app
 

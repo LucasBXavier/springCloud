@@ -1,7 +1,7 @@
 services:
   service-main:
     build:
-      context: ./service-main
+      context: ./service.main
     ports:
       - "8888:8888"
     healthcheck:
@@ -10,10 +10,10 @@ services:
       timeout: 10s
       retries: 5
     networks:
-      - services-network
+      - service-network
   service-notification:
     build:
-      context: ./service-notification
+      context: ./service.notification
     ports:
       - "8082:8082"
     healthcheck:
@@ -25,10 +25,10 @@ services:
      service-main:
         condition: service_healthy
     networks:
-      - services-network
+      - service-network
   service-tasks:
     build:
-      context: ./service-tasks
+      context: ./service.tasks
     ports:
       - "8081:8081"
     healthcheck:
